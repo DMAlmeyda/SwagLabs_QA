@@ -8,8 +8,8 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/resources/Features/Login.feature",glue= {"test"},
 monochrome=true,
-plugin = {"pretty", "junit:target/JUNITReports/report.xml", "html:target/HTMLReports/report.html",
-          "json:target/JSONReports/report.json"}
+plugin = {"pretty", "junit:target/JUNITReports/reportLogin.xml", "html:target/HTMLReports/reportLogin.html",
+          "json:target/JSONReports/reportLogin.json"}
 		)
 public class SwagLabs_LoginPageTestRunner {
 

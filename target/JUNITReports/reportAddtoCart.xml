@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="7.158" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="add products into the shopping cart" name="" time="6.973">
+<system-out><![CDATA[
+Given user open the browser.................................................passed
+And user goes to the website................................................passed
+And user log in into the website............................................passed
+When user click the button Add to cart......................................passed
+Then the product is shown in the shopping cart..............................passed
+]]></system-out>
+</testcase>
+</testsuite>
