@@ -7,8 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SwagLabs_AddtoCartPage {
-	WebDriver driver;
+public class SwagLabs_AddtoCartPage{
 	By backpack_id = By.id("add-to-cart-sauce-labs-backpack");
 	By bikelight_id = By.id("add-to-cart-sauce-labs-bike-light");
 	By tshirt_id = By.id("add-to-cart-sauce-labs-bolt-t-shirt");
@@ -16,10 +15,9 @@ public class SwagLabs_AddtoCartPage {
 	By username = By.id("user-name");
 	By password = By.id("password");
 	By login_btn = By.id("login-button");
-	public WebDriver Connection() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dieguillo\\Desktop\\Api testing\\chromedriver_win32\\chromedriver_win32\\chromedriver.exe");
-		driver = new ChromeDriver();
-		return driver;
+	WebDriver driver;
+	public SwagLabs_AddtoCartPage(WebDriver driver) {
+		this.driver = driver;
 	}
 	public void userLogin() throws InterruptedException {
 		driver.findElement(this.username).sendKeys("standard_user");
@@ -39,8 +37,9 @@ public class SwagLabs_AddtoCartPage {
 		driver.findElement(tshirt_id).click();
 	}
 	
-	public void Gototheshopingcart() {
+	public void Gototheshopingcart() throws InterruptedException {
 		driver.findElement(cart_id).click();
+		Thread.sleep(2000);
 	}
 	
 	public String[] validate_product_names() {

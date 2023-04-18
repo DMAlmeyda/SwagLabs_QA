@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="8.176" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Confirm Purchase" name="User wants to confirm purchase - Example #1.1" time="7.977">
+<system-out><![CDATA[
+Given user open browser.....................................................passed
+And login into the website..................................................passed
+And buy some items..........................................................passed
+And user goes to the shoping cart...........................................passed
+When user click checkout button.............................................passed
+And user type name1, surname1 and 1718......................................passed
+And click continue button...................................................passed
+Then user is available to see the total price...............................passed
+And click the final button, the purchase will be done and the programm will say Thank you for your order!.passed
+]]></system-out>
+</testcase>
+</testsuite>
