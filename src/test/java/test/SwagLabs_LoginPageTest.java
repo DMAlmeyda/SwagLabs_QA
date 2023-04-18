@@ -3,7 +3,7 @@ package test;
 import static org.junit.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
-
+import pages.Connection;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,11 +12,13 @@ import pages.SwagLabs_LoginPage;
 public class SwagLabs_LoginPageTest {
 	WebDriver driver;
 	SwagLabs_LoginPage sl_loginpage;
-
+	Connection cn;
 	@Given("user open browser")
 	public void user_open_browser() {
-		this.sl_loginpage = new SwagLabs_LoginPage();
-		driver = this.sl_loginpage.Connection();
+		cn = new Connection();
+		driver = cn.chromeDriverConnection(driver);
+		this.sl_loginpage = new SwagLabs_LoginPage(driver);
+		
 	}
 
 	@And("enter into the website")

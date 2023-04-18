@@ -8,14 +8,17 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.Connection;
 import pages.SwagLabs_AddtoCartPage;
 public class SwagLabs_AddtoCartPageTest {
 	WebDriver driver;
+	Connection cn;
 	SwagLabs_AddtoCartPage adc;
 	@Given("user open the browser")
 	public void user_open_the_browser() {
-	    adc = new SwagLabs_AddtoCartPage();
-	    driver = adc.Connection();
+		cn = new Connection();
+	    driver = cn.chromeDriverConnection(driver);
+	    adc = new SwagLabs_AddtoCartPage(driver);
 	}
 	
 	@And("user goes to the website")
